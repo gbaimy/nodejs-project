@@ -1,6 +1,12 @@
 {
   "name": "my-project",
   "version": "1.0.0",
+  "description": "A brief description of the project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/my-project.git"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "node app.js",
     "test": "mocha"
