@@ -1,5 +1,15 @@
-"scripts": {
-  "start": "node app.js",
-  "test": "mocha"
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.0"
+  }
 }
 
