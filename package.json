@@ -1,20 +1,17 @@
 {
   "name": "my-project",
   "version": "1.0.0",
-  "description": "A brief description of the project",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/username/my-project.git"
-  },
-  "license": "MIT",
+  "description": "A sample project with a testing setup",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
     "test": "mocha"
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
-    "mocha": "^10.7.3"
-  }
+    "mocha": "^10.0.0",
+    "chai": "^4.3.0",
+    "supertest": "^6.2.0",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {}
 }
+
