@@ -1,0 +1,51 @@
+nodejs-project
+
+    stages {
+        // Checkout Code stage
+        stage('CheckoutCode') {
+            steps {
+                git branch: 'master', url: 'https://github.com/gbaimy/nodejs-project.git'
+            }
+        }
+
+        // Build
+        stage('Build') {
+            steps {
+                nodejs(nodeJSInstallationName: 'nodejs18.6.0') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        // Execute SonarQube Report
+        stage('ExecuteSonarQubeReport') {
+            steps {
+                nodejs(nodeJSInstallationName: 'nodejs18.6.0') {
+                    sh 'npm run sonar'
+                }
+            }
+        }
+
+        // Upload Artifacts Into Nexus
+        stage('UploadArtifactsIntoNexus') {
+            steps {
+                sh 'npm publish'
+            }
+        }
+
+        // Run Node.js App
+        stage('RunNodeJsApp') {
+            steps {
+                sh 'node app.js &'
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
