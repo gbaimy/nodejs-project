@@ -1,4 +1,4 @@
-nodejs-project
+node app.js
 
     stages {
         // Checkout Code stage
