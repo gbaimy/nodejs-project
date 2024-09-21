@@ -11,7 +11,7 @@ node app.js
         // Build
         stage('Build') {
             steps {
-                nodejs(nodeJSInstallationName: 'nodejs18.6.0') {
+                nodejs(nodeJSInstallationName: 'nodejs18.18.2') {
                     sh 'npm install'
                 }
             }
@@ -20,7 +20,7 @@ node app.js
         // Execute SonarQube Report
         stage('ExecuteSonarQubeReport') {
             steps {
-                nodejs(nodeJSInstallationName: 'nodejs18.6.0') {
+                nodejs(nodeJSInstallationName: 'nodejs18.18.2') {
                     sh 'npm run sonar'
                 }
             }
