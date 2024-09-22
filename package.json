@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "1.0.0",
+  "version": "18.18.2",
   "description": "A sample project with a testing setup",
   "main": "app.js",
   "scripts": {
